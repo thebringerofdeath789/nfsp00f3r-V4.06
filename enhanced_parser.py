@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # =====================================================================
 # File: enhanced_parser.py
-# Project: nfsp00f3r V4.05
+# Project: nfsp00f3r V4.06
 # Authors: Gregory King & Matthew Braunschweig
 # Date: 2025-08-16
 #
@@ -31,7 +31,7 @@ class EnhancedEMVParser:
         self.tlv_parser = TLVParser()
         
         # Initialize CVV generator for service code modification
-        default_seed = b"NFSP00F3R_V405_CVV_GENERATOR_SEED"
+    default_seed = b"NFSP00F3R_V406_CVV_GENERATOR_SEED"
         cvk_a, cvk_b = MagstripeCVVGenerator.generate_default_keys(default_seed)
         self.cvv_generator = MagstripeCVVGenerator(cvk_a, cvk_b)
 
@@ -98,7 +98,7 @@ class EnhancedEMVParser:
         
         # Generate enhanced CVV using card-specific salt
         salt = f"SC{new_service_code}_PAN{pan[-4:]}_EXP{expiry}"
-        enhanced_seed = b"NFSP00F3R_V405_CVV_GENERATOR_SEED" + salt.encode('ascii')
+    enhanced_seed = b"NFSP00F3R_V406_CVV_GENERATOR_SEED" + salt.encode('ascii')
         
         # Create card-specific CVV generator
         cvk_a, cvk_b = MagstripeCVVGenerator.generate_default_keys(enhanced_seed)
