@@ -1,0 +1,17 @@
+<!-- =====================================================================
+     File: nav_menu.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Drawer navigation menu items for MainActivity
+===================================================================== -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home" android:title="Home" android:icon="@drawable/ic_card" />
+    <item android:id="@+id/menu_add_card" android:title="Add Card" android:icon="@drawable/ic_add" />
+    <item android:id="@+id/menu_sync" android:title="Sync Cards" android:icon="@drawable/ic_sync" />
+    <item android:id="@+id/menu_replay" android:title="Replay" android:icon="@drawable/ic_replay" />
+    <item android:id="@+id/menu_relay" android:title="Relay" android:icon="@drawable/ic_relay" />
+    <item android:id="@+id/menu_debug" android:title="Debug Console" android:icon="@drawable/ic_debug" />
+    <item android:id="@+id/menu_settings" android:title="Settings" android:icon="@android:drawable/ic_menu_preferences" />
+    <item android:id="@+id/menu_about" android:title="About" android:icon="@android:drawable/ic_menu_info_details" />
+</menu>

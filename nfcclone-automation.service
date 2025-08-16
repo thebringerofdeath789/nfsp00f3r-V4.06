@@ -1,0 +1,33 @@
+[Unit]
+Description=NFCClone Automation System
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/nfcclone
+ExecStart=/usr/bin/python3 /home/pi/nfcclone/start_automation.py --mode headless --log-level INFO
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables
+Environment=PYTHONPATH=/home/pi/nfcclone
+Environment=PYTHONUNBUFFERED=1
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/home/pi/nfcclone/logs
+ReadWritePaths=/tmp
+
+# Hardware access permissions
+SupplementaryGroups=dialout gpio i2c spi
+
+[Install]
+WantedBy=multi-user.target

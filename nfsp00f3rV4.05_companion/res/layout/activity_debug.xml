@@ -1,0 +1,42 @@
+<!-- =====================================================================
+     File: activity_debug.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Debug log UI - color output, search, export button
+===================================================================== -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_debug"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search logs..."
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="true"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:text="Debug log output here..."/>
+
+    <Button
+        android:id="@+id/btnExportLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Export Log"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

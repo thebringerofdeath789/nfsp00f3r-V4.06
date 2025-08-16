@@ -1,0 +1,16 @@
+<!-- =====================================================================
+     File: apduservice.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: HCE registration/config for HceService
+===================================================================== -->
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_name"
+    android:requireDeviceUnlock="false">
+    <aid-group android:category="payment" android:description="EMV Payment">
+        <aid-filter android:name="A0000000031010" />
+        <aid-filter android:name="A0000000041010" />
+        <!-- Add more AIDs if needed -->
+    </aid-group>
+</host-apdu-service>

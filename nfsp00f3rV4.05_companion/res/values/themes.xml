@@ -1,0 +1,16 @@
+<!-- =====================================================================
+     File: themes.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Material3 themes for light/dark modes
+===================================================================== -->
+<resources>
+    <style name="Theme.Nfsp00f3rCompanion" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowBackground">@color/gray</item>
+    </style>
+</resources>

@@ -1,0 +1,61 @@
+<!-- =====================================================================
+     File: card_item.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Single card in RecyclerView list (main screen)
+===================================================================== -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgCardIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_card"
+        android:contentDescription="Card Icon"
+        android:layout_marginEnd="12dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCardPan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXXX XXXX XXXX 1234"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtCardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME SURNAME"
+            android:textSize="14sp"
+            android:textStyle="italic"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgReplay"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_replay"
+        android:contentDescription="Replay"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="4dp"/>
+
+    <ImageView
+        android:id="@+id/imgRelay"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_relay"
+        android:contentDescription="Relay"/>
+</LinearLayout>

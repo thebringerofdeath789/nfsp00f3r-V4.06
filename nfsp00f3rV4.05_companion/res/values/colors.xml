@@ -1,0 +1,18 @@
+<!-- =====================================================================
+     File: colors.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Color palette for Material theme
+===================================================================== -->
+<resources>
+    <color name="colorPrimary">#23296D</color>
+    <color name="colorPrimaryDark">#1A1F55</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="status_ok">#39D353</color>
+    <color name="status_warn">#FFD600</color>
+    <color name="status_bad">#FF3C3C</color>
+</resources>

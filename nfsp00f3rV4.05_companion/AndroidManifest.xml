@@ -1,0 +1,57 @@
+<!-- =====================================================================
+     File: AndroidManifest.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: Application manifest, declares BLE, NFC/HCE, storage, permissions
+===================================================================== -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nfsp00f3r.companion">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_card"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_card"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Nfsp00f3rCompanion">
+        <activity android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Nfsp00f3rCompanion">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReplayActivity" />
+        <activity android:name=".RelayActivity" />
+        <activity android:name=".DebugActivity" />
+        <service android:name=".BleService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+        <service
+            android:name=".HceService"
+            android:permission="android.permission.BIND_NFC_SERVICE"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apduservice" />
+        </service>
+    </application>
+</manifest>

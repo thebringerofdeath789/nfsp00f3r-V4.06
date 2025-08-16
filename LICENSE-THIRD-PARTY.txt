@@ -1,0 +1,13 @@
+Third-Party Licenses
+- Cardhopper (GPL v3+)
+- proxmark3 (GPL v3)
+- RFIDIOt (GPL v2)
+- python-pyscard (GPL v2)
+- OpenEMV (GPL v3)
+- atzedevs/emv-crypto (MIT)
+- danmichaelo/emv (MIT)
+- dimalinux/EMV-Tools (GPL v3)
+- Yagoor/EMV (GPL v3)
+- LucaBongiorni/EMV-NFC-Paycard-Reader (GPL v3)
+- MichaelsPlayground/TalkToYourCreditCardPart7 (GPL v3)
+- destroythedrones/* (various)

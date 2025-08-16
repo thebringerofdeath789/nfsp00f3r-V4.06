@@ -1,0 +1,74 @@
+<!-- =====================================================================
+     File: activity_replay.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: ReplayActivity UI - card selector, HCE controls, log
+===================================================================== -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_replay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <TextView
+        android:id="@+id/label_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Card to Replay"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <Spinner
+        android:id="@+id/spinnerCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/txtReplayStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replay status..."
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Switch
+        android:id="@+id/switchPinless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PIN-less Mode"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnReplay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Replay Card" />
+
+        <Button
+            android:id="@+id/btnSetDefault"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Set as Default" />
+
+        <Button
+            android:id="@+id/btnHceSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HCE Settings" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,81 @@
+# NFCSpoofer V4.05 - Complete Requirements File
+# Core dependencies for advanced key derivation and card management
+
+# GUI Framework
+PyQt5==5.15.9
+PyQt5-Qt5==5.15.2  
+PyQt5-sip==12.12.2
+
+# Smart Card and NFC
+pyscard==2.0.7
+pycryptodome==3.19.0
+cryptography==41.0.8
+
+# Serial Communication
+pyserial==3.5
+
+# Bluetooth (for CardHopper companion)
+pybluez==0.23
+
+# Mathematical and Scientific Computing
+numpy==1.24.4
+scipy==1.10.1
+
+# Data Analysis and Visualization
+matplotlib==3.7.5
+pandas==2.0.3
+
+# Networking and HTTP
+requests==2.31.0
+urllib3==2.0.7
+
+# Threading and Async
+asyncio
+threading
+concurrent.futures
+
+# Cryptographic Libraries
+hashlib
+hmac
+base64
+binascii
+
+# File and Data Handling
+json
+csv
+xml.etree.ElementTree
+configparser
+
+# System and OS
+os
+sys
+platform
+pathlib
+subprocess
+datetime
+time
+random
+struct
+collections
+itertools
+
+# Testing and Development  
+pytest==7.4.4
+pytest-qt==4.2.0
+
+# Optional: Machine Learning for Pattern Recognition
+scikit-learn==1.3.2
+
+# Optional: Advanced Crypto Analysis
+sympy==1.12
+
+# Windows-specific
+# pywin32==306  # Uncomment for Windows-specific features
+
+# Development Tools
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
+
+# Additional crypto libraries for advanced analysis
+ecdsa==0.18.0

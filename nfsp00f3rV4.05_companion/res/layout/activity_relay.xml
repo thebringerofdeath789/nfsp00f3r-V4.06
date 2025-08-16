@@ -1,0 +1,80 @@
+<!-- =====================================================================
+     File: activity_relay.xml
+     Project: nfsp00f3r Companion - Android BLE/HCE App
+     Authors: Gregory King & Matthew Braunschweig
+     Date: 2025-08-04
+     Description: RelayActivity UI - BLE pair, card select, start/stop, log
+===================================================================== -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_relay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <TextView
+        android:id="@+id/label_relay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live Relay Mode"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    <Spinner
+        android:id="@+id/spinnerRelayCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/txtRelayStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relay status..."
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPairRelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Pair BLE" />
+
+        <Button
+            android:id="@+id/btnStartRelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Start Relay" />
+
+        <Button
+            android:id="@+id/btnStopRelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRelayLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="APDU log will appear here..."
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:padding="8dp"
+        android:textIsSelectable="true"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"/>
+</LinearLayout>
